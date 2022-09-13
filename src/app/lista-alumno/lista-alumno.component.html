@@ -1,1 +1,10 @@
-<p>lista-alumno works!</p>
+<h4>Lista de alumnos</h4>
+<table>
+  <tr *ngFor="let a1 of alumnos">
+    <td>{{a1.run}}</td>
+    <td>{{a1.nombre}}</td>
+    <td>{{a1.apellido}}</td>
+    <td>{{a1.edad}}</td>
+    <td>{{a1.seccion.nombre}}</td>
+  </tr>
+</table>

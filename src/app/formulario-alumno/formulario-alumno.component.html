@@ -1,1 +1,40 @@
-<p>formulario-alumno works!</p>
+<h4>Nuevo alumno</h4>
+<table>
+  <tr>
+    <th>RUN</th>
+    <td>
+      <input type="text" [value]="alumno.run" (input)="cambiaRun($event)">
+    </td>
+  </tr>
+  <tr>
+    <th>Nombre</th>
+    <td>
+      <input type="text" [value]="alumno.nombre" (input)="cambiaNombre($event)">
+    </td>
+  </tr>
+  <tr>
+    <th>Apellido</th>
+    <td>
+      <input type="text" [value]="alumno.apellido" (input)="cambiaApellido($event)">
+    </td>
+  </tr>
+  <tr>
+    <th>Edad</th>
+    <td>
+      <input type="number" [value]="alumno.edad" (input)="cambiaEdad($event)">
+    </td>
+  </tr>
+  <tr>
+    <th>Seccion</th>
+    <td>
+      <select (click)="cambiaSeccion($event)">
+        <option *ngFor="let s1 of secciones" value="{{s1.id}}">{{s1.nombre}}</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <button type="button" (click)="guardar()">Guardar</button>
+    </th>
+  </tr>
+</table>

@@ -1,1 +1,14 @@
-<p>formulario-seccion works!</p>
+<h4>Nueva seccion</h4>
+<table>
+  <tr>
+    <th>Nombre</th>
+    <td>
+      <input type="text" [value]="seccion.nombre" (input)="cambiaNombreSec($event)">
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <button type="button" (click)="guardar()">Guardar</button>
+    </th>
+  </tr>
+</table>
