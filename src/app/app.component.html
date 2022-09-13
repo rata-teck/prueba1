@@ -1,6 +1,29 @@
 <h2>AsistenciaAPP</h2><br>
 <app-lista-historial [historial]="historial"></app-lista-historial><br>
 <h4>Registro de asistencia</h4>
+<table>
+  <tr>
+    <th>Seccion</th>
+    <td>
+      <select (click)="cambiaSeccion($event)">
+        <option *ngFor="let s3 of secciones" value="{{s3.id}}">{{s3.nombre}}</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <th>Alumno</th>
+    <td>
+      <select (click)="cambiaAlumno($event)">
+        <option *ngFor="let a3 of alumnos" value="{{a3.run}}">{{a3.nombre}} {{a3.apellido}}</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <th>
+      <button type="button" (click)="registrar()">Guardar</button>
+    </th>
+  </tr>
+</table>
 <app-lista-alumno [alumnos]="alumnos"></app-lista-alumno><br><br><br>
 <app-formulario-seccion (enviarSecciones)="puenteSecciones($event)"></app-formulario-seccion>
 <app-formulario-alumno (enviarAlumno)="puenteAlumno(Alm)"></app-formulario-alumno>
