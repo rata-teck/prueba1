@@ -26,4 +26,4 @@
 </table>
 <app-lista-alumno [alumnos]="alumnos"></app-lista-alumno><br><br><br>
 <app-formulario-seccion (enviarSecciones)="puenteSecciones($event)"></app-formulario-seccion>
-<app-formulario-alumno (enviarAlumno)="puenteAlumno(Alm)"></app-formulario-alumno>
+<app-formulario-alumno [secciones]="secciones" (enviarAlumno)="puenteAlumno($event)"></app-formulario-alumno>

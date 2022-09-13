@@ -13,6 +13,8 @@ export class AppComponent {
   public alumnos : Array<Alumno> = [];
   public secciones : Array<Seccion> = [];
 
+
+
   public registro! : Historial;
   public puenteSecciones(Secs:Array<Seccion>):void{
     this.secciones = Secs;
@@ -40,7 +42,7 @@ export class AppComponent {
     }
   }
   public registrar():void{
-    this.registro.fecha = Date.now();
+    this.registro.fecha = Date.now().valueOf();
     this.historial.push(this.registro);
   }
 }
